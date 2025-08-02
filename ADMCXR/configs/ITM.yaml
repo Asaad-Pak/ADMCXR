@@ -1,0 +1,24 @@
+train_file: 'F:/Asaad_Output/Preprocessing/ITM/Training_Data/pretty_output/itm_train.json' # for validation
+val_file: 'F:/Asaad_Output/Preprocessing/ITM/Validation_Data/pretty_output/itm_dev.json'                
+test_file: 'F:/Asaad_Output/Preprocessing/ITM/Test_Data/pretty_output/itm_test.json'
+  
+
+image_res: 384
+batch_size_train: 8 # original 32
+batch_size_test: 1 # original 64
+
+alpha: 0.4
+distill: True
+warm_up: False
+
+bert_config: 'configs/config_bert.json'
+
+optimizer: {opt: adamW, lr: 2e-5, weight_decay: 0.02}
+schedular: {sched: cosine, lr: 2e-5, epochs: 7, min_lr: 1e-6, decay_rate: 1, warmup_lr: 1e-5, warmup_epochs: 1, cooldown_epochs: 0}
+
+
+
+
+
+
+
